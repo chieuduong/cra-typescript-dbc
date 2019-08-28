@@ -1,0 +1,147 @@
+.app-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+  pointer-events: none;
+}
+.text-center {
+  text-align: center;
+}
+
+.app-header {
+  background-color: #FFF;
+  .menu-button {
+    margin-right: 20px;
+  }
+  .title {
+    font-size: 16px;
+  }
+  .search {
+    position: relative;
+    border-radius: 5px;
+    background-color: rgba(255,255,255,0.15);
+    margin-right: 20px;
+    margin-left: 10px;
+    width: 200px;
+    position: absolute;
+    right: 150px;
+    &:hover {
+      background-color: rgba(255,255,255,0.25);
+    }
+  }
+  .search-icon {
+    width: 35px;
+    height: 100%;
+    position: absolute;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .input-wrapper {
+    padding: 5px 5px 5px 40px;
+    width: 100%;
+    input {
+      color: #FFF;
+    }
+  }
+  .section-desktop {
+    display: block;
+    position: absolute;
+    right: 15px;
+  }
+}
+.sidebar {
+  .MuiDrawer-paper {
+    top: 65px;
+    width: 100px;
+  }
+  .list-item {
+    display: block;
+    padding: 0;
+    span {
+      display: block;
+      text-align: center;
+    }
+    .icons {
+      .MuiSvgIcon-root {
+        font-size: 1.5rem;
+      }
+    }
+    .name {
+      font-size: 12px;
+      margin: 5px;
+    }
+  }
+  .list-group-item {
+    display: block;
+    padding: 10px 8px 8px;
+    text-align: center;
+    color: #000;
+    text-decoration: none;
+    &:active {
+      color: #3f51b5;
+    }
+    &.selected {
+      color: #3f51b5;
+      border-right: 3px solid #3f51b5;
+    }
+  }
+}
+.content-wrapper {
+  padding: 100px 20px 20px 120px;
+  .home {
+    padding: 50px;
+  }
+  .logo {
+    width: 200px;
+    height: 200px;
+    display: block;
+    margin: 0 auto;
+  }
+  .buttons {
+    margin: 5px;
+    text-transform: capitalize;
+    &.primary {
+      color: #FFF;
+      background-color: #3f51b5;
+      &.MuiButton-outlined {
+        background-color: transparent;
+        border: 1px solid #3f51b5;
+        color: #3f51b5;
+      }
+    }
+  }
+  .MuiPaper-root {
+    padding: 20px;
+  }
+  .mg-10 {
+    margin: 10px 0;
+  }
+  .mg-20 {
+    margin: 20px 0;
+  }
+  .color-primary {
+    color: #3f51b5;
+  }
+  .photo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    display: block;
+    overflow: hidden;
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "general": {
+    "title": "Cra-Typescript-Master",
+    "description": "Boilerplate : Create React App - Typescript - Redux Saga",
+    "search": "Tìm kiếm..."
+  },
+  "sidebar": {
+    "home": "Trang chủ",
+    "employees": "Nhân viên",
+    "styleguide": "Styleguide"
+  },
+  "employees": {
+    "title": "CRA - Nhân viên",
+    "table": {
+      "header": {
+        "id": "ID",
+        "photo": "Hình ảnh",
+        "employeeName": "Tên nhân viên",
+        "role": "Vị trí",
+        "address": "Địa chỉ"
+      }
+    }
+  },
+  "styleguide": {
+    "title": "Styleguide : Cra Typescript Saga",
+    "content": {
+      "grid": "1. Grids",
+      "typo": "2. Typography",
+      "buttons": "3. Buttons",
+      "table": "4. Table"
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "extends": ["tslint:recommended", "tslint-config-prettier", "tslint-plugin-prettier", "tslint-react"],
+  "rulesDirectory": ["tslint-no-focused-test"],
+  "rules": {
+    "no-focused-test": true,
+    "await-promise": false,
+    "member-ordering": [true, { "order": "statics-first", "alphabetize": true }],
+    "newline-before-return": true,
+    "no-any": true,
+    "no-console": [true, "log"],
+    "no-empty-interface": true,
+    "no-implicit-dependencies": [false, "dev"],
+    "prettier": true,
+    "jsx-boolean-value": false,
+    "promise-function-async": true,
+    "jsx-no-multiline-js": false,
+    "object-literal-sort-keys": false,
+    "variable-name": {
+      "options": ["ban-keywords", "check-format", "allow-pascal-case", "allow-leading-underscore"]
+    },
+    "ordered-imports": [
+      true,
+      {
+        "grouped-imports": true,
+        "import-sources-order": "case-insensitive",
+        "module-source-path": "full",
+        "named-imports-order": "case-insensitive"
+      }
+    ],
+    "typedef": [true, "call-signature", "parameter", "arrow-parameter", "property-declaration"]
+  },
+  "linterOptions": {
+    "exclude": ["src/serviceWorker.ts"]
+  }
+}
