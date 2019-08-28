@@ -25,11 +25,11 @@
 
 ### Employees page
 
-> The ways how can connect `API` via `Saga`, `Reducer`, `Selector` and display data to UI.
+* The ways how can connect `API` via `Saga`, `Reducer`, `Selector` and display data to UI.
 
 ### Styleguide page
 
-> Simple `components` defined on this page.
+* Simple `components` defined on this page.
 
 ### Setup and Running
 
