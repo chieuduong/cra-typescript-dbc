@@ -1,3 +1,5 @@
+![alt text](https://github.com/chieuduong/cra-typescript-dbc/blob/master/cra-typescript-dbc.png)
+
 # Cra-Typescript-Dbc
 
 > Boilerplate : Create React App - Typescript - Redux Saga
