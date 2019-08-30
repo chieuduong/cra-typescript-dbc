@@ -1,8 +1,8 @@
 import { connect } from 'react-redux';
-import { getEmployeesAction } from './actions';
-import { Employees as EmployeesComponent } from './Employees.component';
 import { IRootState } from 'configs/rootReducers';
-import { selectEmployees } from './selectors';
+import { EmployeeForm as EmployeeFormComponent } from './EmployeeForm.component';
+import { openFormEmployees, selectEmployeeDetail } from '../selectors';
+import { closeFormAction } from '../actions';
 
 interface IOwnProps { };
 
@@ -12,14 +12,15 @@ type IInjectedProps = IMappedProps & IDispatchedProps;
 export type IProps = IOwnProps & IInjectedProps;
 
 const mapStateToProps = (state: IRootState) => ({
-  dataEmployees: selectEmployees(state),
+  openForm: openFormEmployees(state),
+  employee: selectEmployeeDetail(state),
 });
 
 const mapDispatchToProps = {
-  getEmployeesAction: getEmployeesAction,
+  closeForm: closeFormAction,
 };
 
-export const Employees = connect(
+export const EmployeeForm = connect(
   mapStateToProps,
   mapDispatchToProps
-)(EmployeesComponent);
+)(EmployeeFormComponent);

@@ -11,6 +11,9 @@
   },
   "employees": {
     "title": "CRA - Employees",
+    "form": {
+      "title": "Employee creation"
+    },
     "table": {
       "header": {
         "id": "ID",

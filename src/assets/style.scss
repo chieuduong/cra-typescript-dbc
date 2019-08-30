@@ -135,6 +135,36 @@
       height: auto;
     }
   }
+  .MuiTableRow-root {
+    &:hover {
+      background-color: rgba(63,81,181,0.85);
+      cursor: pointer;
+      * {
+        color: #FFF;
+      }
+    }
+  }
+}
+.form-drawer {
+  .MuiDrawer-paper {
+    width: 300px;
+    .form-title {
+      margin: 20px 20px 10px;
+    }
+    .close-form {
+      position: absolute;
+      padding: 5px;
+      top: 3px;
+      right: 5px;
+      font-size: 1.2rem;
+      svg {
+        font-size: 20px;
+      }
+    }
+  }
+  .MuiPaper-root {
+    padding: 20px;
+  }
 }
 
 @keyframes App-logo-spin {

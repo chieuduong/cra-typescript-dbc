@@ -1,15 +1,22 @@
 import React, { Component, ReactNode } from 'react';
 import { Grid, Typography, TableHead, Table, TableRow, TableCell, TableBody } from '@material-ui/core';
-import { IProps } from './Employees.container';
-import { IEmployee } from './constants';
+import { IProps } from './EmployeesList.container';
+import { IEmployee } from '../constants';
 import map from 'lodash/map';
 import isEmpty from 'lodash/isEmpty';
 import { i18n } from 'utils/lib/i18n';
+import { EmployeeForm } from '../EmployeeForm';
 
-export class Employees extends Component<IProps> {
+export class EmployeesList extends Component<IProps> {
 
   public componentDidMount(): void {
-    this.props.getEmployeesAction();
+    this.props.getEmployees();
+  }
+
+  public onEditEmployee = (data: IEmployee) => {
+    return (): void => {
+      this.props.openEmployeeEditionForm(data);
+    }
   }
 
   public render(): ReactNode {
@@ -37,7 +44,7 @@ export class Employees extends Component<IProps> {
               <TableBody>
                 {!isEmpty(dataEmployees) && (
                   map(dataEmployees, (data: IEmployee, index: number): ReactNode => (
-                    <TableRow key={index}>
+                    <TableRow key={index} onClick={this.onEditEmployee(data)}>
                       <TableCell>{data.id}</TableCell>
                       <TableCell>
                         <div className="photo">
@@ -53,6 +60,7 @@ export class Employees extends Component<IProps> {
             </Table>
           </Grid>
         </Grid>
+        <EmployeeForm />
       </div>
     );
   }

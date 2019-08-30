@@ -2,7 +2,7 @@ import React, { PureComponent, ReactNode } from 'react';
 import { Router, Switch, Route } from 'react-router-dom';
 import 'assets/style.scss';
 import { HomePage } from 'pages/HomePage';
-import { Employees } from 'pages/Employees';
+import { EmployeesList } from 'pages/Employees/EmployeesList';
 import { Styleguide } from 'pages/Styleguide';
 import { Login } from 'pages/Login';
 import Routes from 'utils/routes';
@@ -36,7 +36,7 @@ export class App extends PureComponent<{}> {
                 <Route
                   exact
                   path={Routes.employee.pathname}
-                  component={Employees}
+                  component={EmployeesList}
                 />
                 <Route
                   path={Routes.styleguide.pathname}

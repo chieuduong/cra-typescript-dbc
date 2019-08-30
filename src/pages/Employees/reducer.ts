@@ -1,14 +1,24 @@
 import { IEmployeeActions } from './actions';
-import { GET_EMPLOYEE, GET_EMPLOYEE_SUCCESS, IEmployee } from './constants';
+import {
+  GET_EMPLOYEE,
+  GET_EMPLOYEE_SUCCESS,
+  OPEN_EDITION_FORM,
+  CLOSE_FORM_EMPLOYEE,
+  IEmployee
+} from './constants';
 
 export interface IEmployeesState {
   list?: IEmployee[],
   loadingEmployees: boolean;
+  isOpenForm: boolean;
+  dataEmployee?: IEmployee;
 }
 
 export const initialState = {
   list: [],
   loadingEmployees: false,
+  isOpenForm: false,
+  dataEmployee: undefined,
 };
 
 export const employeesReducer = (
@@ -23,9 +33,22 @@ export const employeesReducer = (
       };
     case GET_EMPLOYEE_SUCCESS:
       return {
+        ...state,
         loadingEmployees: false,
         list: action.payload.employeesData,
       };
+    case OPEN_EDITION_FORM:
+      return {
+        ...state,
+        isOpenForm: true,
+        dataEmployee: action.payload.employeeData,
+      }
+    case CLOSE_FORM_EMPLOYEE:
+      return {
+        ...state,
+        isOpenForm: false,
+        // dataEmployee: undefined,
+      }
     default:
       return state;
   }

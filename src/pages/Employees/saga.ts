@@ -6,18 +6,10 @@ import {
 import { SagaIterator } from 'redux-saga';
 import { GET_EMPLOYEE } from './constants';
 import { getEmployeesSuccessAction } from './actions';
-
-const getEmployee = async () => {
-  try {
-    const data = await fetch('http://5d64d48426046800144d78fa.mockapi.io/employee');
-    return data.json();
-  } catch (error) {
-    console.log(error);
-  }
-}
+import { employeesRequests } from './requests';
 
 function* getEmployeesSaga(): SagaIterator {
-  const employee = yield call(getEmployee);
+  const employee = yield call(employeesRequests.list);
   yield put(getEmployeesSuccessAction(employee));
 }
 
