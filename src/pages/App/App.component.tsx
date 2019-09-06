@@ -5,6 +5,7 @@ import { HomePage } from 'pages/HomePage';
 import { EmployeesList } from 'pages/Employees/EmployeesList';
 import { Styleguide } from 'pages/Styleguide';
 import { Login } from 'pages/Login';
+import { Algo } from 'pages/Algorithm';
 import Routes from 'utils/routes';
 import { TopBar } from 'components/TopBar';
 import { Sidebar } from 'components/Sidebar';
@@ -41,6 +42,10 @@ export class App extends PureComponent<{}> {
                 <Route
                   path={Routes.styleguide.pathname}
                   component={Styleguide}
+                />
+                <Route
+                  path={Routes.algorithm.pathname}
+                  component={Algo}
                 />
               </Switch>
             </div>

@@ -13,5 +13,8 @@ export default {
   },
   styleguide: {
     pathname: '/styleguide'
+  },
+  algorithm: {
+    pathname: '/algorithm'
   }
 };

@@ -5,12 +5,14 @@
     "search": "Search..."
   },
   "sidebar": {
-    "home": "Home",
+    "home": "CRA",
     "employees": "Employees",
-    "styleguide": "Styleguide"
+    "styleguide": "Styleguide",
+    "listing": "Listing",
+    "algorithm": "Algorithm"
   },
   "employees": {
-    "title": "CRA - Employees",
+    "title": "CRA - Employee list",
     "form": {
       "title": "Employee creation"
     },
@@ -31,6 +33,11 @@
       "typo": "2. Typography",
       "buttons": "3. Buttons",
       "table": "4. Table"
+    }
+  },
+  "algorithm": {
+    "menu": {
+      "list": "List algorithm"
     }
   }
 }

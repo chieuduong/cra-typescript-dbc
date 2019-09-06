@@ -4,6 +4,7 @@ import DashboardRounded from '@material-ui/icons/DashboardRounded';
 // import CheckBoxOutlineBlank from '@material-ui/icons/CheckBoxOutlineBlank';
 import FormatListBulleted from '@material-ui/icons/FormatListBulleted';
 import Transform from '@material-ui/icons/Transform';
+import Fingerprint from '@material-ui/icons/Fingerprint';
 import Routes from 'utils/routes';
 import { NavLink } from 'react-router-dom';
 import { i18n } from 'utils/lib/i18n';
@@ -41,6 +42,7 @@ export class Sidebar extends Component<{}> {
     const dash = <DashboardRounded />;
     const list = <FormatListBulleted />;
     const styleguide = <Transform />;
+    const finger = <Fingerprint />;
 
     return (
       <>
@@ -56,13 +58,18 @@ export class Sidebar extends Component<{}> {
             />
             <RenderListItem
               icons={list}
-              translationKey={i18n.t('sidebar.employees')}
+              translationKey={i18n.t('sidebar.listing')}
               link={Routes.employee.pathname}
             />
             <RenderListItem
               icons={styleguide}
               translationKey={i18n.t('sidebar.styleguide')}
               link={Routes.styleguide.pathname}
+            />
+            <RenderListItem
+              icons={finger}
+              translationKey={i18n.t('sidebar.algorithm')}
+              link={Routes.algorithm.pathname}
             />
           </List>
         </Drawer>

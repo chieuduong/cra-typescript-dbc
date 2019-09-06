@@ -98,6 +98,10 @@
     display: block;
     margin: 0 auto;
   }
+  .full-image {
+    width: 100%;
+    height: auto;
+  }
   .buttons {
     margin: 5px;
     text-transform: capitalize;
@@ -142,6 +146,48 @@
       * {
         color: #FFF;
       }
+    }
+  }
+  .list-algo {
+    margin: 20px 0;
+    .title,
+    .MuiSvgIcon-root {
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .MuiSvgIcon-root {
+      font-size: 18px;
+    }
+    .algo-menu {
+      text-transform: capitalize;
+      text-align: left;
+      min-height: 35px;
+      &.Mui-selected {
+        background-color: rgba(63,81,181,0.3);
+        border-radius: 20px 0 0 20px;
+      }
+      .MuiTab-wrapper {
+        align-items: flex-start;
+      }
+    }
+    .content-code {
+      padding: 10px;
+    }
+    .header-code {
+      background-color: #F4F5F7;
+      border-radius: 5px 5px 0 0;
+      font-size: 15px;
+      padding: 10px 20px;
+      color: #3f51b5;
+    }
+    .preview-code {
+      white-space: pre-wrap;
+      min-height: 50px;
+      font-size: 13px;
+      color: #333;
+      position: relative;
+      background-color: #dfd;
+      border-radius: 0 0 5px 5px;
     }
   }
 }
