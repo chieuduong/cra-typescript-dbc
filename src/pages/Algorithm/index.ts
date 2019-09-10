@@ -1,1 +1,1 @@
-export { Algo } from './Algorithm.component';
+export { Algo } from './Algorithm.component';

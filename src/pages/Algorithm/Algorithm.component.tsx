@@ -1,6 +1,6 @@
 import React, { Component, ReactNode, FC } from 'react';
 import algorithm from 'assets/images/algorithm.png';
-import { Typography, Tab, Tabs, Box, Grid, Paper, Divider } from '@material-ui/core';
+import { Typography, Tab, Tabs, Grid, Paper, Divider } from '@material-ui/core';
 import { algorithms } from './algorithms';
 import { i18n } from 'utils/lib/i18n';
 import ViewAgenda from '@material-ui/icons/ViewAgenda';
@@ -31,7 +31,7 @@ const TabPanel: FC<ITabPanel> = ({ children, isPanel, value }) => {
 
 export class Algo extends Component {
   public state: IState = {
-    selectTab: 'findMissingNumber',
+    selectTab: 'palindrome',
   }
 
   public handleChange = (_event: object, value: string): void => {
@@ -77,9 +77,8 @@ export class Algo extends Component {
             <Grid item xs={9}>
               <Paper className="content-code">
                 {algorithms.map((algo, index) => (
-                  <>
+                  <div key={algo.id}>
                     <TabPanel
-                      key={algo.id}
                       isPanel={selectTab}
                       value={algo.id}
                     >
@@ -90,7 +89,7 @@ export class Algo extends Component {
                         {algo.content}
                       </div>
                     </TabPanel>
-                  </>
+                  </div>
                 ))}
               </Paper>
             </Grid>
