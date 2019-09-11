@@ -62,11 +62,11 @@ export class Algo extends Component {
                   indicatorColor="primary"
                 >
                   {
-                    algorithms.map(algo => (
+                    algorithms.map((algo, index) => (
                       <Tab
                         className="algo-menu"
                         key={algo.id}
-                        label={algo.label}
+                        label={`${++index}. ${algo.label}`}
                         value={algo.id}
                         aria-controls={`vertical-tabpanel-${algo.id}`}
                       />
@@ -76,14 +76,14 @@ export class Algo extends Component {
             </Grid>
             <Grid item xs={9}>
               <Paper className="content-code">
-                {algorithms.map((algo, index) => (
+                {algorithms.map(algo => (
                   <div key={algo.id}>
                     <TabPanel
                       isPanel={selectTab}
                       value={algo.id}
                     >
                       <Typography variant="h6" className="header-code">
-                        {++index}. {algo.label}
+                        {algo.label}
                       </Typography>
                       <div className="preview-code">
                         {algo.content}
