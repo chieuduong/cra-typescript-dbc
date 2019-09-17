@@ -1,7 +1,6 @@
 {
   "compilerOptions": {
     "module": "commonjs",
-    "jsx": "react",
     "baseUrl": "src"
   }
 }
