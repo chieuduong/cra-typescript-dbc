@@ -7,15 +7,21 @@ interface IProps {
   outlined?: boolean;
   size?: 'small' | 'medium' | 'large';
   icon?: ReactNode;
+  onClick?: () => void;
 }
 
 export class Buttons extends Component<IProps> {
 
   public render(): ReactNode {
-    const { text, color, outlined, size, icon } = this.props;
+    const { text, color, outlined, size, icon, onClick } = this.props;
     return (
       <>
-        <Button size={size} variant={outlined ? 'outlined' : 'contained'} className={`buttons ${color}`}>
+        <Button
+          size={size}
+          variant={outlined ? 'outlined' : 'contained'}
+          className={`buttons ${color}`}
+          onClick={onClick}
+        >
           {icon} {text}
         </Button>
       </>
