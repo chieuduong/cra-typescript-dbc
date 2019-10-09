@@ -3,15 +3,16 @@ import { IProps } from './Styleguide.container';
 import { Typography, Grid, Paper, Divider, Table, TableHead, TableBody } from '@material-ui/core';
 import { Buttons } from 'components/Buttons';
 import { TableCell, TableRow } from '@material-ui/core';
+import { i18n } from 'utils/lib/i18n';
 
 export class Styleguide extends Component<IProps> {
   public render(): ReactNode {
     return (
       <div className="styleguide">
-        <Typography variant="h3" className="color-primary mg-20">Styleguide : Cra Typescript Saga</Typography>
+        <Typography variant="h5" className="color-primary mg-20">{i18n.t('styleguide.title')}</Typography>
         <Grid container spacing={3}>
           <Grid item xs={12}>
-            <Typography variant="h6" className="mg-10 color-primary">1. Columns</Typography>
+            <Typography variant="h6" className="mg-10 color-primary">{i18n.t('styleguide.content.grid')}</Typography>
           </Grid>
         </Grid>
         <Grid container spacing={3}>
@@ -40,7 +41,7 @@ export class Styleguide extends Component<IProps> {
         <Divider className="mg-20" />
         <Grid container spacing={3}>
           <Grid item xs={12}>
-            <Typography variant="h6" className="mg-10 color-primary">2. Typography</Typography>
+            <Typography variant="h6" className="mg-10 color-primary">{i18n.t('styleguide.content.typo')}</Typography>
           </Grid>
         </Grid>
         <Grid container spacing={3}>
@@ -84,7 +85,7 @@ export class Styleguide extends Component<IProps> {
         <Divider className="mg-20" />
         <Grid container spacing={3}>
           <Grid item xs={12}>
-            <Typography variant="h6" className="mg-10 color-primary">3. Buttons</Typography>
+            <Typography variant="h6" className="mg-10 color-primary">{i18n.t('styleguide.content.buttons')}</Typography>
           </Grid>
         </Grid>
         <Grid container spacing={3}>
@@ -97,7 +98,7 @@ export class Styleguide extends Component<IProps> {
         <Divider className="mg-20" />
         <Grid container spacing={3}>
           <Grid item xs={12}>
-            <Typography variant="h6" className="mg-10 color-primary">4. Table</Typography>
+            <Typography variant="h6" className="mg-10 color-primary">{i18n.t('styleguide.content.table')}</Typography>
           </Grid>
         </Grid>
         <Grid container spacing={3}>

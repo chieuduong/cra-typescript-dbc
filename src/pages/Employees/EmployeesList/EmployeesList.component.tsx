@@ -26,7 +26,7 @@ export class EmployeesList extends Component<IProps> {
       <div className="employees">
         <Grid container spacing={3}>
           <Grid item xs={12}>
-            <Typography variant="h6" className="mg-10 color-primary">{i18n.t('employees.title')}</Typography>
+            <Typography variant="h5" className="mg-10 color-primary">{i18n.t('employees.title')}</Typography>
           </Grid>
         </Grid>
         <Grid container spacing={3}>

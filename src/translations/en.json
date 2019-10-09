@@ -2,7 +2,11 @@
   "general": {
     "title": "Cra-Typescript-Master",
     "description": "Boilerplate : Create React App - Typescript - Redux Saga",
-    "search": "Search..."
+    "search": "Search...",
+    "language": {
+      "english": "English",
+      "vietnam": "Vietnamese"
+    }
   },
   "sidebar": {
     "home": "CRA",
@@ -29,7 +33,7 @@
   "styleguide": {
     "title": "Styleguide : Cra Typescript Saga",
     "content": {
-      "grid": "1. Grids",
+      "grid": "1. Columns",
       "typo": "2. Typography",
       "buttons": "3. Buttons",
       "table": "4. Table"
