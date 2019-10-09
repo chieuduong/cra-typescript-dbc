@@ -22,7 +22,7 @@ export class Buttons extends Component<IProps> {
           className={`buttons ${color}`}
           onClick={onClick}
         >
-          {icon} {text}
+          <span className="icons">{icon}</span> {text}
         </Button>
       </>
     );

@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { getEmployeesAction, openEmployeeEditionFormAction } from '../actions';
+import { getEmployeesAction, openEmployeeEditionFormAction, openCreationFormAction } from '../actions';
 import { EmployeesList as EmployeesListComponent } from './EmployeesList.component';
 import { IRootState } from 'configs/rootReducers';
 import { selectEmployees } from '../selectors';
@@ -18,6 +18,7 @@ const mapStateToProps = (state: IRootState) => ({
 const mapDispatchToProps = {
   getEmployees: getEmployeesAction,
   openEmployeeEditionForm: openEmployeeEditionFormAction,
+  openCreationForm: openCreationFormAction,
 };
 
 export const EmployeesList = connect(

@@ -208,9 +208,57 @@
         font-size: 20px;
       }
     }
+    .text-field {
+      width: 100%;
+      margin-bottom: 10px;
+      .MuiInputBase-input {
+        // padding: 13.5px;
+        height: auto;
+      }
+    }
+    .label-error {
+      color: #f44336;
+      font-size: 13px;
+    }
+    .MuiGrid-item {
+      padding-top: 0;
+    }
   }
   .MuiPaper-root {
     padding: 20px;
+  }
+  .buttons {
+    margin: 5px;
+    text-transform: capitalize;
+    padding: 5px 20px 5px 15px;
+    &.primary {
+      color: #FFF;
+      background-color: #3f51b5;
+      &.MuiButton-outlined {
+        background-color: transparent;
+        border: 1px solid #3f51b5;
+        color: #3f51b5;
+      }
+    }
+  }
+}
+.buttons {
+  .icons {
+    margin-right: 5px;
+    display: inline-flex;
+    vertical-align: middle;
+    svg {
+      font-size: 17px;
+    }
+  }
+}
+
+.chips {
+  display: 'flex';
+  justify-content: 'center';
+  flex-wrap: 'wrap';
+  & > * {
+    margin: 5px;
   }
 }
 

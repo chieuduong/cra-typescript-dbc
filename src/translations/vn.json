@@ -17,6 +17,15 @@
   },
   "employees": {
     "title": "CRA - Nhân viên",
+    "form": {
+      "create": "Thêm nhân viên",
+      "edit": "Cập nhật nhân viên",
+      "employeeName": "Tên nhân viên",
+      "role": "Vị trí",
+      "address": "Địa chỉ",
+      "add": "Thêm",
+      "update": "Cập nhật"
+    },
     "table": {
       "header": {
         "id": "Mã số",
@@ -31,14 +40,20 @@
     "title": "Hướng dẫn tạo kiểu : Cra Typescript Saga",
     "content": {
       "grid": "1. Chia cột",
-      "typo": "2. Kiểu chữ",
-      "buttons": "3. Nút",
-      "table": "4. Bảng"
+      "buttons": "2. Nút",
+      "tag": "3. Nhãn",
+      "typo": "4. Kiểu chữ",
+      "table": "5. Bảng"
     }
   },
   "algorithm": {
     "menu": {
       "list": "Danh sách thuật toán"
+    }
+  },
+  "yup": {
+    "errors": {
+      "required": "Khung nhập không được để trống."
     }
   }
 }

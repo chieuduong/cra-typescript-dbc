@@ -4,7 +4,8 @@ import {
   GET_EMPLOYEE_SUCCESS,
   OPEN_EDITION_FORM,
   CLOSE_FORM_EMPLOYEE,
-  IEmployee
+  IEmployee,
+  OPEN_CREATION_FORM
 } from './constants';
 
 export interface IEmployeesState {
@@ -37,6 +38,11 @@ export const employeesReducer = (
         loadingEmployees: false,
         list: action.payload.employeesData,
       };
+    case OPEN_CREATION_FORM:
+      return {
+        ...state,
+        isOpenForm: true,
+      }
     case OPEN_EDITION_FORM:
       return {
         ...state,
@@ -47,7 +53,7 @@ export const employeesReducer = (
       return {
         ...state,
         isOpenForm: false,
-        // dataEmployee: undefined,
+        dataEmployee: undefined,
       }
     default:
       return state;

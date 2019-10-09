@@ -18,7 +18,13 @@
   "employees": {
     "title": "CRA - Employee list",
     "form": {
-      "title": "Employee creation"
+      "create": "Employee creation",
+      "edit": "Employee edition",
+      "employeeName": "Employee Name",
+      "role": "Role",
+      "address": "Address",
+      "add": "Add",
+      "update": "Update"
     },
     "table": {
       "header": {
@@ -34,14 +40,20 @@
     "title": "Styleguide : Cra Typescript Saga",
     "content": {
       "grid": "1. Columns",
-      "typo": "2. Typography",
-      "buttons": "3. Buttons",
-      "table": "4. Table"
+      "buttons": "2. Buttons",
+      "tag": "3. Tags",
+      "typo": "4. Typography",
+      "table": "5. Table"
     }
   },
   "algorithm": {
     "menu": {
       "list": "List algorithm"
+    }
+  },
+  "yup": {
+    "errors": {
+      "required": "The input should not empty."
     }
   }
 }

@@ -23,3 +23,10 @@ export interface IEmployee {
   address: string;
   position: string;
 }
+
+export interface IEmployeeFormValues {
+  id: string;
+  name: string;
+  address: string;
+  position: string;
+}

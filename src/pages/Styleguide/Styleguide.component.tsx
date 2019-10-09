@@ -2,11 +2,22 @@ import React, { Component, ReactNode } from 'react';
 import { IProps } from './Styleguide.container';
 import { Typography, Grid, Paper, Divider, Table, TableHead, TableBody } from '@material-ui/core';
 import { Buttons } from 'components/Buttons';
-import { TableCell, TableRow } from '@material-ui/core';
+import { TableCell, TableRow, Chip, Avatar } from '@material-ui/core';
 import { i18n } from 'utils/lib/i18n';
+import AddCircle from '@material-ui/icons/AddCircleOutlineOutlined';
+import FaceIcon from '@material-ui/icons/Face';
+import DoneIcon from '@material-ui/icons/Done';
 
 export class Styleguide extends Component<IProps> {
   public render(): ReactNode {
+    const handleDelete = () => {
+      alert('You clicked the delete icon.');
+    };
+
+    const handleClick = () => {
+      alert('You clicked the Chip.');
+    };
+
     return (
       <div className="styleguide">
         <Typography variant="h5" className="color-primary mg-20">{i18n.t('styleguide.title')}</Typography>
@@ -41,6 +52,75 @@ export class Styleguide extends Component<IProps> {
         <Divider className="mg-20" />
         <Grid container spacing={3}>
           <Grid item xs={12}>
+            <Typography variant="h6" className="mg-10 color-primary">{i18n.t('styleguide.content.buttons')}</Typography>
+          </Grid>
+        </Grid>
+        <Grid container spacing={3}>
+          <Grid item xs={12}>
+            <Buttons text="Primary" color="primary" />
+            <Buttons text="Default" />
+            <Buttons outlined text="Outlined" color="primary" />
+            <Buttons
+              icon={<AddCircle />}
+              text="With Icons"
+              color="primary"
+            />
+          </Grid>
+        </Grid>
+        <Grid container spacing={3}>
+          <Grid item xs={12}>
+            <Typography variant="h6" className="mg-10 color-primary">{i18n.t('styleguide.content.tag')}</Typography>
+          </Grid>
+          <Grid item xs={12}>
+            <Grid item xs={12}>
+              <div className="chips">
+                <Chip label="Basic" variant="outlined" />
+                <Chip
+                  icon={<FaceIcon />}
+                  label="Clickable deletable"
+                  onClick={handleClick}
+                  onDelete={handleDelete}
+                  variant="outlined"
+                />
+                <Chip
+                  label="Custom delete icon"
+                  onClick={handleClick}
+                  onDelete={handleDelete}
+                  deleteIcon={<DoneIcon />}
+                  variant="outlined"
+                />
+                <Chip
+                  avatar={<Avatar>M</Avatar>}
+                  label="Primary clickable"
+                  clickable
+                  color="primary"
+                  onDelete={handleDelete}
+                  deleteIcon={<DoneIcon />}
+                  variant="outlined"
+                />
+                <Chip
+                  icon={<FaceIcon />}
+                  label="Primary clickable"
+                  clickable
+                  color="primary"
+                  onDelete={handleDelete}
+                  deleteIcon={<DoneIcon />}
+                  variant="outlined"
+                />
+                <Chip
+                  icon={<FaceIcon />}
+                  label="Deletable secondary"
+                  onDelete={handleDelete}
+                  color="secondary"
+                  variant="outlined"
+                />
+              </div>
+            </Grid>
+          </Grid>
+        </Grid>
+        <Divider className="mg-20" />
+        <Grid container spacing={3}>
+          <Grid item xs={12}>
             <Typography variant="h6" className="mg-10 color-primary">{i18n.t('styleguide.content.typo')}</Typography>
           </Grid>
         </Grid>
@@ -67,32 +147,11 @@ export class Styleguide extends Component<IProps> {
             <Typography variant="subtitle2" gutterBottom>
               subtitle2. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos blanditiis tenetur
             </Typography>
-            <Typography variant="body1" gutterBottom>
-              body1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos blanditiis tenetur
-              unde suscipit, quam beatae rerum inventore consectetur, neque doloribus, cupiditate numquam
-              dignissimos laborum fugiat deleniti? Eum quasi quidem quibusdam.
-            </Typography>
             <Typography variant="body2" gutterBottom>
-              body2. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos blanditiis tenetur
+              body. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos blanditiis tenetur
               unde suscipit, quam beatae rerum inventore consectetur, neque doloribus, cupiditate numquam
               dignissimos laborum fugiat deleniti? Eum quasi quidem quibusdam.
             </Typography>
-            <Typography variant="button" display="block" gutterBottom>
-              button text
-            </Typography>
-          </Grid>
-        </Grid>
-        <Divider className="mg-20" />
-        <Grid container spacing={3}>
-          <Grid item xs={12}>
-            <Typography variant="h6" className="mg-10 color-primary">{i18n.t('styleguide.content.buttons')}</Typography>
-          </Grid>
-        </Grid>
-        <Grid container spacing={3}>
-          <Grid item xs={12}>
-            <Buttons text="Primary" color="primary" />
-            <Buttons text="Default" />
-            <Buttons outlined text="Outlined" color="primary" />
           </Grid>
         </Grid>
         <Divider className="mg-20" />

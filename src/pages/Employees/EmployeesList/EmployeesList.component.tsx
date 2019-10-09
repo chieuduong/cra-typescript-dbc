@@ -1,11 +1,12 @@
 import React, { Component, ReactNode } from 'react';
-import { Grid, Typography, TableHead, Table, TableRow, TableCell, TableBody } from '@material-ui/core';
+import { Grid, Typography, TableHead, Table, TableRow, TableCell, TableBody, IconButton, Fab } from '@material-ui/core';
 import { IProps } from './EmployeesList.container';
 import { IEmployee } from '../constants';
 import map from 'lodash/map';
 import isEmpty from 'lodash/isEmpty';
 import { i18n } from 'utils/lib/i18n';
 import { EmployeeForm } from '../EmployeeForm';
+import AddIcon from '@material-ui/icons/Add';
 
 export class EmployeesList extends Component<IProps> {
 
@@ -19,14 +20,33 @@ export class EmployeesList extends Component<IProps> {
     }
   }
 
+  public onCreateEmployee = () => {
+    return (): void => {
+      this.props.openCreationForm();
+    }
+  }
+
+
   public render(): ReactNode {
     const { dataEmployees } = this.props;
 
     return (
       <div className="employees">
         <Grid container spacing={3}>
-          <Grid item xs={12}>
+          <Grid item xs={8}>
             <Typography variant="h5" className="mg-10 color-primary">{i18n.t('employees.title')}</Typography>
+          </Grid>
+          <Grid item xs={4} >
+            <Typography variant="h5" className="mg-10 color-primary" align="right">
+              <Fab
+                size="small"
+                color="primary"
+                aria-label="add"
+                onClick={this.onCreateEmployee()}
+              >
+                <AddIcon />
+              </Fab>
+            </Typography>
           </Grid>
         </Grid>
         <Grid container spacing={3}>
