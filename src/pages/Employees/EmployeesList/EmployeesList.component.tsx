@@ -6,6 +6,7 @@ import map from 'lodash/map';
 import isEmpty from 'lodash/isEmpty';
 import { i18n } from 'utils/lib/i18n';
 import { EmployeeForm } from '../EmployeeForm';
+import { Loading } from 'components/Loading';
 import AddIcon from '@material-ui/icons/Add';
 
 export class EmployeesList extends Component<IProps> {
@@ -28,7 +29,7 @@ export class EmployeesList extends Component<IProps> {
 
 
   public render(): ReactNode {
-    const { dataEmployees } = this.props;
+    const { dataEmployees, loadingEmployees } = this.props;
 
     return (
       <div className="employees">
@@ -62,6 +63,13 @@ export class EmployeesList extends Component<IProps> {
                 </TableRow>
               </TableHead>
               <TableBody>
+                {loadingEmployees && (
+                  <TableRow>
+                    <TableCell colSpan={5} className="loading-row">
+                      <Loading />
+                    </TableCell>
+                  </TableRow>
+                )}
                 {!isEmpty(dataEmployees) && (
                   map(dataEmployees, (data: IEmployee, index: number): ReactNode => (
                     <TableRow key={index} onClick={this.onEditEmployee(data)}>

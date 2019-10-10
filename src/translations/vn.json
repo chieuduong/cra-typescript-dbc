@@ -42,8 +42,9 @@
       "grid": "1. Chia cột",
       "buttons": "2. Nút",
       "tag": "3. Nhãn",
-      "typo": "4. Kiểu chữ",
-      "table": "5. Bảng"
+      "loading": "4. Loading",
+      "typo": "5. Kiểu chữ",
+      "table": "6. Bảng"
     }
   },
   "algorithm": {

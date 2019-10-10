@@ -22,15 +22,17 @@
 
 ### Home page
 
-* Introduce about Cra-Typescript-Dbc
+* Introduce about Cra-Typescript-Dbc and switch languages between `English` and `Vietnamese`
 
 ### Employees page
 
 * The ways how can connect `API` via `Saga`, `Reducer`, `Selector` and display data to UI.
 
+* Toggle drawler by `Creation` or `Edition` include validation by libraries `Formik` and `Yup`.
+
 ### Styleguide page
 
-* Simple `components` defined on this page.
+* The `components` defined on this page.
 
 ### Setup and Running
 

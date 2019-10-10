@@ -253,6 +253,21 @@
   }
 }
 
+.loading {
+  position: relative;
+  .MuiLinearProgress-root {
+    height: 2px;
+  }
+}
+
+.MuiTableBody-root {
+  .loading-row {
+    padding: 0;
+    position: relative;
+    top: -3px;
+  }
+}
+
 .chips {
   display: 'flex';
   justify-content: 'center';

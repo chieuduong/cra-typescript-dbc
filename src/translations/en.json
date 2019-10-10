@@ -42,8 +42,9 @@
       "grid": "1. Columns",
       "buttons": "2. Buttons",
       "tag": "3. Tags",
-      "typo": "4. Typography",
-      "table": "5. Table"
+      "loading": "4. Loading",
+      "typo": "5. Typography",
+      "table": "6. Table"
     }
   },
   "algorithm": {

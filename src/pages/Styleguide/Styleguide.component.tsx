@@ -1,12 +1,15 @@
 import React, { Component, ReactNode } from 'react';
 import { IProps } from './Styleguide.container';
-import { Typography, Grid, Paper, Divider, Table, TableHead, TableBody } from '@material-ui/core';
+import { Typography, Grid, Paper, Divider, Table, TableHead, TableBody, Fab } from '@material-ui/core';
 import { Buttons } from 'components/Buttons';
 import { TableCell, TableRow, Chip, Avatar } from '@material-ui/core';
 import { i18n } from 'utils/lib/i18n';
 import AddCircle from '@material-ui/icons/AddCircleOutlineOutlined';
 import FaceIcon from '@material-ui/icons/Face';
 import DoneIcon from '@material-ui/icons/Done';
+import AddIcon from '@material-ui/icons/Add';
+import EditRounded from '@material-ui/icons/EditRounded';
+import { Loading } from 'components/Loading';
 
 export class Styleguide extends Component<IProps> {
   public render(): ReactNode {
@@ -65,6 +68,21 @@ export class Styleguide extends Component<IProps> {
               text="With Icons"
               color="primary"
             />
+            <Fab
+              size="small"
+              color="primary"
+              aria-label="add"
+              style={{ margin: '0 8px' }}
+            >
+              <AddIcon />
+            </Fab>
+            <Fab
+              size="small"
+              color="secondary"
+              aria-label="add"
+            >
+              <EditRounded />
+            </Fab>
           </Grid>
         </Grid>
         <Grid container spacing={3}>
@@ -116,6 +134,17 @@ export class Styleguide extends Component<IProps> {
                 />
               </div>
             </Grid>
+          </Grid>
+        </Grid>
+        <Divider className="mg-20" />
+        <Grid container spacing={3}>
+          <Grid item xs={12}>
+            <Typography variant="h6" className="mg-10 color-primary">{i18n.t('styleguide.content.loading')}</Typography>
+          </Grid>
+        </Grid>
+        <Grid container spacing={3}>
+          <Grid item xs={12}>
+            <Loading />
           </Grid>
         </Grid>
         <Divider className="mg-20" />

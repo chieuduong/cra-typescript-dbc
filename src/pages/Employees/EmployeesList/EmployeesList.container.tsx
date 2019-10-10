@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import { getEmployeesAction, openEmployeeEditionFormAction, openCreationFormAction } from '../actions';
 import { EmployeesList as EmployeesListComponent } from './EmployeesList.component';
 import { IRootState } from 'configs/rootReducers';
-import { selectEmployees } from '../selectors';
+import { selectEmployees, selectLoadingEmployees } from '../selectors';
 
 interface IOwnProps { };
 
@@ -13,6 +13,7 @@ export type IProps = IOwnProps & IInjectedProps;
 
 const mapStateToProps = (state: IRootState) => ({
   dataEmployees: selectEmployees(state),
+  loadingEmployees: selectLoadingEmployees(state),
 });
 
 const mapDispatchToProps = {
